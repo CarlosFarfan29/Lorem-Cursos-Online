@@ -1,0 +1,347 @@
+#logo{
+    margin: 5px 2% 0 35px;
+}
+
+#logo a{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+	top: 0;
+	left: 0;
+	font-family: 'open sans';
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+nav a{
+    color: #777;
+    text-decoration: none;
+    padding: 7px 22px;
+    font-size: 15px;
+    transition: .2s;
+}
+
+nav > a:hover{
+    background: #FF6347;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Buscador */
+.search{
+    width: 300px;
+    margin: 0 15px 0 130px;
+}
+
+.search .buscar{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0 0 0 40px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.buscar input, .buscar button{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 35px;
+    padding: 0;
+}
+
+.buscar input{
+    color: #666;
+    border: none;
+    z-index: 2;
+}
+
+.buscar button{
+    font-size: 1.3em;
+    width: 50px;
+    border: none;
+    background: #FF6347;
+    transform: translate(-50px,0);
+    transition-duration: .3s;
+}
+
+button .fa-search{
+    color: #bbb;
+    transform: translate(-190px,0);
+    transition: all .1s ease-in-out;
+}
+
+button .fa-search:hover{
+    color: #FF6347;
+}
+
+.buscar input:focus{
+    outline: none;
+}
+
+.buscar input:focus + button{
+    transform: translate(0,0);
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.buscar input:focus + button .fa{
+    color: white;
+    transform: translate(0,0);
+    transition-duration: .4s;
+}
+
+.cuenta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1{
+    background: white;
+    color: #0056D2;
+}
+
+.btn2{
+    background: #0056D2;
+    color: white;
+}
+
+.cuenta button{
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.cuenta a{
+    margin: 0 5px;
+    padding: 0;
+}
+
+.btn1:hover{
+    background-color: #F3F8FF;
+}
+
+.btn2:hover{
+    background-color: #00419E;
+}
+
+.mision{
+	text-align: center;
+}
+.mision h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 80px;
+	background: #035;
+	color: #FFC04A;
+	padding: 75px;
+}
+.mision div{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	width: 1000px;
+	margin: auto;
+	padding: 95px 0;
+}
+.mision div p:nth-child(2){
+	margin: 30px 0;
+}
+.admision{
+	background: #FFC04A;
+	display: flex;
+}
+.contenedor-admision{
+	width: 50%;
+	padding: 100px;
+}
+.contenedor-admision div{
+	width: 440px;
+	text-align: center;
+	margin: auto;
+}
+.contenedor-admision div h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.contenedor-admision div p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	margin-bottom: 60px;
+}
+.contenedor-admision div a{
+	text-decoration: none;
+	color: #000;
+	padding: 15px;
+	border: 1px solid #000;
+	border-radius: 30px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	transition: .3s;
+}
+.contenedor-admision div a:hover{
+	background: #000;
+	color: #FFC04A;
+	transition: .3s;
+}
+#imagen-admision{
+	background-image: url(../img/imagen-admision.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+}
+.personal{
+	text-align: center;
+	padding: 100px 0;
+}
+.personal h1{
+	margin-bottom: 100px;
+	font-size: 40px;
+	font-family: 'Oswald', sans-serif;
+}
+.contenedor-personal{
+	display: flex;
+	flex-wrap: wrap;
+}
+.contenedor-personal div{
+	width: 25%;
+}
+#imagen-personal-1{
+	background-image: url(../img/personal-1.jpg);
+}
+#imagen-personal-2{
+	background-image: url(../img/personal-2.jpg);
+}
+#imagen-personal-3{
+	background-image: url(../img/personal-3.jpg);
+}
+#imagen-personal-4{
+	background-image: url(../img/personal-4.jpg);
+}
+#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4{
+	background-size: cover;
+	width: 100%;
+	height: 450px;
+	background-position: center;
+}
+.contenedor-personal div h2{
+	font-family: 'Oswald', sans-serif;
+	margin: 50px 0;
+}
+.contenedor-personal div h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+.contenedor-personal div a{
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1280px){
+	.contenedor-admision div{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1130px){
+	.mision h1{
+		padding: 60px;
+	}
+	.mision div{
+		padding: 65px;
+		width: 100%;
+	}
+	.contenedor-admision{
+		padding: 65px;
+		padding-bottom: 80px;
+	}
+	.personal{
+		padding: 65px 0;
+	}
+	.personal h1{
+		margin-bottom: 65px;
+	}
+	.contenedor-personal div{
+		width: 50%;
+	}
+	.contenedor-personal div:nth-child(1), .contenedor-personal div:nth-child(2){
+		margin-bottom: 50px;
+	}
+	#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4{
+		height: 330px;
+	}
+}
+@media screen and (max-width: 890px){
+	.admision{
+		flex-direction: column;
+	}
+	.contenedor-admision{
+		order: 1;
+		width: 100%;
+		text-align: center;
+	}
+	.contenedor-admision div p{
+		margin-bottom: 40px;
+	}
+	#imagen-admision{
+		order: 0;
+		width: 100%;
+		height: 320px;
+	}
+}
+@media screen and (max-width: 570px){
+	.mision h1, .mision div{
+		padding: 45px 30px;
+	}
+	.mision h1{
+		font-size: 60px;
+	}
+	.contenedor-admision{
+		padding: 45px 30px 60px 30px;
+	}
+	.contenedor-admision div h1{
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+	.personal{
+		padding: 45px 0;
+	}
+	.personal h1{
+		font-size: 30px;
+		margin-bottom: 45px;
+	}
+	.contenedor-personal div{
+		width: 100%;
+	}
+	.contenedor-personal div:nth-child(1), .contenedor-personal div:nth-child(2), .contenedor-personal div:nth-child(3){
+		margin-bottom: 45px;
+	}
+	.contenedor-personal div h2{
+		margin: 45px 0 20px 0;
+	}
+	.contenedor-personal div h3{
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 425px){
+	.mision h1{
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 340px){
+	.mision h1{
+		font-size: 30px;
+	}
+}
