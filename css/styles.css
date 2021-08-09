@@ -134,10 +134,18 @@ nav a{
     transition: .2s;
 }
 
-nav > a:hover{
+.nav_item:hover{
     background: #FF6347;
     color: white;
     border-radius: 5px;
+}
+
+.nav_label{
+    font-size: 30px;
+}
+
+.nav_label, .nav_input{
+    display: none;
 }
 
 /* Buscador */
@@ -398,7 +406,7 @@ button .fa-search:hover{
 
 .caracteristicas-cursos{
     background: white;
-    height: 700px;
+    height: auto;
 }
 
 .caracteristicas-cursos ul{
@@ -439,15 +447,21 @@ button .fa-search:hover{
     color: #505050;
 }
 
-/* Clientes */
+/* Testimonios-Estudiantes */
 
 .estudiantes-contenedor{
     width: 100%;
-    height: 750px;
+    height: 820px;
     background-image: url(../img/bg-estudiantes.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+}
+
+.estudiantes-contenedor .item{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
 }
 
 .estudiantes-contenedor .testimonial-item{
@@ -455,9 +469,9 @@ button .fa-search:hover{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     margin: 15px;
     position: relative;
-    padding: 50px 30px 70px 30px;
-    background: linen;
-    margin-top: 80px;
+    padding: 55px 30px 50px 30px;
+    background: #DCECF9;
+    margin-top: 100px;
 }
 
 .testimonial-item img{
@@ -466,44 +480,45 @@ button .fa-search:hover{
 }
 
 .testimonial-item .img-item{
-    width: 200px;
+    width: 190px;
     position: absolute;
-    
-    top: -30px;
+    left: -15px;
+    top: -40px;
 }
 
 .testimonial-item .quote-icon i{
     position: absolute;
     left: 50px;
-    bottom: 40px;
-    color: darkorange;
+    bottom: 55px;
+    color: #FF6347;
     font-size: 48px;
 }
 
 .testimonial-item p{
-    margin-top: 0;
     font-style: italic;
     font-weight: 500;
     color: #000;
+    margin-left: 160px;
+    width: 65%;
 }
 
 .testimonial-item h4{
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 0;
     margin-top: 20px;
+    margin-left: 160px;
 }
 
 .testimonial-item span{
     font-size: 14px;
     color: #000;
     font-weight: 500;
-    float: left;
+    margin-left: 160px;
 }
 
 .testimonial-item .stars{
-    right: 30px;
-    bottom: 60px;
+    right: 55px;
+    bottom: 75px;
     position: absolute;
 }
 
@@ -516,10 +531,6 @@ button .fa-search:hover{
     color: darkorange;
 }
 
-.quote-icon{
-    margin-top: 20px;
-}
-
 .estudiantes-contenedor .owl-dots{
     margin-top: 0;
     text-align: center;
@@ -529,7 +540,7 @@ button .fa-search:hover{
     margin: 0 5px;
     width: 14px;
     height: 14px;
-    background-color: #d4d4d4;
+    background-color: #DCECF9;
     transition: all .5s;
 }
 
@@ -703,15 +714,39 @@ footer{
 
 /* Responsive */
 @media screen and (max-width:900px){
-
-    /* Menu */
-    #logo{
-        margin: 5px;
+    /* nav */
+    .nav_label{
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        padding-right: 40px;
     }
 
-    nav{
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav_menu{
+        position: fixed;
+        top: 61px;
+        background: #DCECF9;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav_input:checked + .nav_menu{
+        clip-path: circle(100% at center);
+    }
+
+    .search{
+        display: none;
+    }
+
+    .cuenta{
+        display: none;
     }
 
     /* Header */
@@ -730,7 +765,17 @@ footer{
     }
 
     .contenedor-botones button{
-        padding: 7px 12px;
+        padding: 10px 12px;
+    }
+
+    /* logos-partners */
+    .logos a img{
+        width: auto;
+        margin: 5px;
+    }
+
+    .logos-partners .contenedor-logos{
+        width: 80%;
     }
 
     /* Cursos */
@@ -742,28 +787,9 @@ footer{
         height: auto;
     }
 
-    /* Estudiantes */
-    .cards{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .cards .card{
-        width: 90%;
-    }
-
-    .cards .card:first-child{
-        margin-bottom: 30px;
-    }
-
-    .estudiantes-contenedor{
-        background-position: center;
-        height: 850px;
-    }
-
-    .estudiantes-contenedor h2{
-        width: 98%;
+    /* caracteristicas-cursos */
+    .carac{
+        width: 100%;
     }
 
     /* Contacto */
@@ -814,6 +840,7 @@ footer{
 
     .textos-portada .texto{
         margin: 0;
+        margin-bottom: 10px;
         width: 95%;
     }
 
@@ -823,7 +850,6 @@ footer{
 
     .textos-portada h2{
         font-size: 14px;
-        margin-bottom: 20px;
     }
 
     .contenedor-botones{
@@ -835,6 +861,16 @@ footer{
     .contenedor-botones button{
         font-size: 16px;
         margin-bottom: 10px;
+    }
+
+    /* logos-partners */
+    .logos a img{
+        width: 90px;
+        margin: 5px;
+    }
+
+    .logos-partners .contenedor-logos{
+        width: 90%;
     }
 
     /* Cursos */

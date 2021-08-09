@@ -9,18 +9,26 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://kit.fontawesome.com/a954c0603f.js" crossorigin="anonymous"></script>
+    <script src="js/scrollreveal.js"></script>
 </head>
 <body>
     <header class="slider">
-        <nav>
-            <div id="logo">
+        <nav class="navbar">
+            <div id="logo" class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="logo" width="153px"></a>
             </div>
+
+            <label for="menu" class="nav_label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu" class="nav_input">
             
-            <a href="index.html">Inicio</a>
-            <a href="#cursos">Cursos</a>
-            <a href="acerca-de.html">Acerca de </a>
-            <a href="#contacto">Contacto</a>
+            <div class="nav_menu">
+                <a href="index.html" class="nav_item">Inicio</a>
+                <a href="#cursos" class="nav_item">Cursos</a>
+                <a href="acerca-de.html" class="nav_item">Acerca de </a>
+                <a href="#contacto" class="nav_item">Contacto</a>
+            </div>
 
             <form action="" class="search">
                 <fieldset class="buscar">
@@ -66,7 +74,7 @@
         </section>
 
         <section class="nuestros-cursos" id="cursos">
-            <div class="contenedor">
+            <div class="contenedor scroll-cursos">
                 <h2 class="titulo">Explora cursos populares</h2>
                 <div class="tittle-style"></div>
 
@@ -198,7 +206,7 @@
 
         <section class="estudiantes-contenedor">
             <div class="wave1" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C159.99,-8.38 228.83,103.13 500.00,49.98 L500.27,-15.28 L0.28,-17.27 Z" style="stroke: none; fill: white;"></path></svg></div>
-            <h2 class="titulo">Que opinan nuestros estudiantes</h2>
+            <h2 class="titulo scroll-titulo">Que opinan nuestros estudiantes</h2>
             <div class="tittle-style"></div>
 
             <div class="owl-carousel owl-theme">
@@ -211,8 +219,8 @@
                             <i class="fas fa-quote-left"></i>
                         </div>
                         <div class="contenido-texto-card">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis voluptatem, aperiam quae esse eligendi error ea hic aliquid! Voluptatem.?</p>
-                            <h4>Nombre</h4>
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim tempora praesentium sapiente facilis doloremque! Natus nihil aspernatur accusamus et vitae inventore ea qui iste."</p>
+                            <h4>Thomas Carl</h4>
                             <span>Estudiante</span>
                         </div>
                         <ul class="stars">
@@ -233,8 +241,8 @@
                             <i class="fas fa-quote-right"></i>
                         </div>
                         <div class="contenido-texto-card">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis voluptatem, aperiam quae esse eligendi error ea hic aliquid! Voluptatem.?</p>
-                            <h4>Nombre</h4>
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam et dolorum nam harum! Omnis blanditiis sint assumenda dolores, eius reprehenderit animi voluptas quod natus numquam!"</p>
+                            <h4>Laura James</h4>
                             <span>Estudiante</span>
                         </div>
                         <ul class="stars">
@@ -255,8 +263,8 @@
                             <i class="fas fa-quote-left"></i>
                         </div>
                         <div class="contenido-texto-card">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis voluptatem, aperiam quae esse eligendi error ea hic aliquid! Voluptatem.?</p>
-                            <h4>Nombre</h4>
+                            <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum quae, possimus quam sint laborum, iusto ullam recusandae placeat veniam fugiat eaque. Quam libero repudiandae eaque."</p>
+                            <h4>Manuel Castillo</h4>
                             <span>Estudiante</span>
                         </div>
                         <ul class="stars">
@@ -277,8 +285,8 @@
                             <i class="fas fa-quote-right"></i>
                         </div>
                         <div class="contenido-texto-card">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis voluptatem, aperiam quae esse eligendi error ea hic aliquid! Voluptatem.?</p>
-                            <h4>Nombre</h4>
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, rerum. Commodi adipisci, earum vero recusandae doloremque et, at sed nobis voluptates ex enim sequi quia?"</p>
+                            <h4>Paola Sandoval</h4>
                             <span>Estudiante</span>
                         </div>
                         <ul class="stars">
@@ -296,7 +304,7 @@
         </section>
 
         <section class="cont-contacto" id="contacto">
-            <h2 class="titulo">Contacto</h2>
+            <h2 class="titulo scroll-titulo">Contacto</h2>
             <div class="tittle-style"></div>
             
             <div class="contenedor cont">
@@ -333,11 +341,12 @@
                 </ul>
               </div>
         </div>
-        <h2 class="titulo-derechos">Copyright &copy; 2021 Lorem</h2>
+        <h2 class="titulo-derechos scroll-titulo">Copyright &copy; 2021 Lorem</h2>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
     
 
     <script>
