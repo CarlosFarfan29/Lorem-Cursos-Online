@@ -8,6 +8,19 @@ body {
 * {
     box-sizing: border-box;
 }
+
+/* Scrolling bar */
+body::-webkit-scrollbar{
+    width: 9px;
+    background: #dcecf9;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #0056D2;
+    border-radius: 10px;
+    border-right: 1px solid #dcecf9;
+}
+
 #logo{
     margin: 5px 2% 0 35px;
 }
@@ -18,6 +31,7 @@ body {
 }
 
 nav{
+    font-family: 'open sans';
     top: 0;
     display: flex;
     align-items: center;
@@ -36,10 +50,18 @@ nav a{
     transition: .2s;
 }
 
-nav > a:hover{
+.nav_item:hover{
     background: #FF6347;
     color: white;
     border-radius: 5px;
+}
+
+.nav_label{
+    font-size: 30px;
+}
+
+.nav_label, .nav_input{
+    display: none;
 }
 
 /* Buscador */
@@ -142,6 +164,7 @@ button .fa-search:hover{
 .btn2:hover{
     background-color: #00419E;
 }
+
 .contenedor{
     width: 100%;
     padding: 15px;
@@ -204,6 +227,101 @@ p{
 .link-2:hover{
     color: cadetblue;
 }
+
+/* Footer */
+footer{
+    font-family: 'open sans';
+    background: #24303c;
+    padding: 20px 0 20px 0;
+    margin: auto;
+    margin-top: 150px;
+    overflow: hidden;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.titulo-derechos{
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    color: #9e9797;
+}
+
+.about-us{
+    width: 22%;
+    margin-bottom: 5px;
+}
+
+.about-us h4{
+    color: white;
+    border-bottom: 3px solid #1f53c5;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+.about-us p{
+    color: white;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.social-menu ul {
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #4fd634;
+}
+
+/* Responsive */
 @media(min-width:768px)
 {
     .formulario{
@@ -211,6 +329,86 @@ p{
         width: 500px;
         margin-top: 150px;
         border-radius: 2%;
+    }
+}
+
+@media screen and (max-width:900px){
+    /* nav */
+    .nav_label{
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        padding-right: 35px;
+    }
+
+    .nav_menu{
+        position: fixed;
+        top: 61px;
+        background: #2C2F48;
+        width: 100%;
+        height: 60vh;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav_item{
+        font-family: 'Times New Roman';
+        font-size: 23px;
+        color: #fff;
+        font-weight: 600;
+        border-bottom: 1px solid #3F425E;
+    }
+
+    .nav_input:checked + .nav_menu{
+        clip-path: circle(100% at center);
+    }
+
+    .search{
+        display: none;
+    }
+
+    .cuenta{
+        display: none;
+    }
+
+    /* Footer */
+    .contenedor-footer{
+        flex-direction: column;
+    }
+
+    .about-us{
+        width: 90%;
+    }
+
+    .social-menu{
+        margin: 40px 0;
+    }
+}
+
+
+@media screen and (max-width:500px){ 
+    /* Footer */
+    .about-us h4{
+        width: auto;
+    }
+
+    .social-menu ul{
+        width: 99%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ul a{
+        margin-bottom: 5px;
+    }
+
+    .titulo-derechos{
+        font-size: 17px;
     }
 }
 

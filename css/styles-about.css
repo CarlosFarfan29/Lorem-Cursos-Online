@@ -1,3 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+body{
+    font-family: 'open sans';
+}
+
+/* Scrolling bar */
+body::-webkit-scrollbar{
+    width: 9px;
+    background: #dcecf9;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #0056D2;
+    border-radius: 10px;
+    border-right: 1px solid #dcecf9;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FF6347;
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.tittle-style {
+    position: relative;
+}
+
+.tittle-style:before {
+    content: "";
+    background: #000;
+    width: 13%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 43%;
+}
+
+.tittle-style:after {
+    content: "";
+    background: #0056D2;
+    width: 5%;
+    height: 5px;
+    position: absolute;
+    top: -2px;
+    left: 47%;
+    border-radius: 6px;
+}
+
 #logo{
     margin: 5px 2% 0 35px;
 }
@@ -9,8 +73,6 @@
 
 nav{
 	top: 0;
-	left: 0;
-	font-family: 'open sans';
     display: flex;
     align-items: center;
     background: white;
@@ -28,10 +90,18 @@ nav a{
     transition: .2s;
 }
 
-nav > a:hover{
+.nav_item:hover{
     background: #FF6347;
     color: white;
     border-radius: 5px;
+}
+
+.nav_label{
+    font-size: 30px;
+}
+
+.nav_label, .nav_input{
+    display: none;
 }
 
 /* Buscador */
@@ -139,24 +209,26 @@ button .fa-search:hover{
 	text-align: center;
 }
 .mision h1{
-	font-family: 'Oswald', sans-serif;
-	font-size: 80px;
-	background: #035;
-	color: #FFC04A;
-	padding: 75px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 37px;
+	color: #ff6347;
+	margin: 120px 0 5px 0;
 }
 .mision div{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
+	color: #505050;
 	width: 1000px;
 	margin: auto;
-	padding: 95px 0;
+	padding: 70px 0;
+}
+.mision div p{
+	line-height: 200%;
 }
 .mision div p:nth-child(2){
 	margin: 30px 0;
 }
 .admision{
-	background: #FFC04A;
+	background: #f2f2f2;
 	display: flex;
 }
 .contenedor-admision{
@@ -169,29 +241,29 @@ button .fa-search:hover{
 	margin: auto;
 }
 .contenedor-admision div h1{
-	font-family: 'Oswald', sans-serif;
-	font-size: 40px;
-	margin-bottom: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 37px;
+	color: #ff6347;
+	margin-bottom: 5px;
 }
 .contenedor-admision div p{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	margin-bottom: 60px;
+	font-size: 14px;
+	color: #505050;
+	margin: 35px 0 50px 0;
+	line-height: 200%;
 }
 .contenedor-admision div a{
+	font-family: 'Roboto Condensed', sans-serif;
 	text-decoration: none;
-	color: #000;
-	padding: 15px;
-	border: 1px solid #000;
-	border-radius: 30px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	transition: .3s;
+	color: #fff;
+	padding: 15px 20px;
+	border-radius: 3px;
+	font-size: 20px;
+	background: #0056d2;
+	box-shadow: 0 0 6px 0;
 }
 .contenedor-admision div a:hover{
-	background: #000;
-	color: #FFC04A;
-	transition: .3s;
+	background-color: #00419E;
 }
 #imagen-admision{
 	background-image: url(../img/imagen-admision.jpg);
@@ -201,19 +273,20 @@ button .fa-search:hover{
 }
 .personal{
 	text-align: center;
-	padding: 100px 0;
+	padding: 70px 0;
 }
 .personal h1{
-	margin-bottom: 100px;
-	font-size: 40px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 37px;
+	color: #ff6347;
+	margin-bottom: 5px;
 }
 .contenedor-personal{
 	display: flex;
 	flex-wrap: wrap;
 }
 .contenedor-personal div{
-	width: 25%;
+	width: 20%;
 }
 #imagen-personal-1{
 	background-image: url(../img/personal-1.jpg);
@@ -227,26 +300,120 @@ button .fa-search:hover{
 #imagen-personal-4{
 	background-image: url(../img/personal-4.jpg);
 }
-#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4{
+#imagen-personal-5{
+	background-image: url(../img/personal-5.jpg);
+}
+#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4, #imagen-personal-5{
 	background-size: cover;
 	width: 100%;
 	height: 450px;
 	background-position: center;
 }
 .contenedor-personal div h2{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	margin: 50px 0;
+	color: #0056d2;
+	font-size: 23px;
 }
 .contenedor-personal div h3{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
+	font-size: 17px;
 	margin-bottom: 30px;
 }
 .contenedor-personal div a{
-	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	color: #000;
-	font-size: 15px;
+	color: #505050;
+	font-size: 14px;
+}
+
+/* Footer */
+footer{
+    background: #24303c;
+    padding: 20px 0 20px 0;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.titulo-derechos{
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    color: #9e9797;
+}
+
+.about-us{
+    width: 22%;
+    margin-bottom: 5px;
+}
+
+.about-us h4{
+    color: white;
+    border-bottom: 3px solid #1f53c5;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+.about-us p{
+    color: white;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.social-menu ul {
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #4fd634;
 }
 
 /* Responsive */
@@ -256,9 +423,9 @@ button .fa-search:hover{
 	}
 }
 @media screen and (max-width: 1130px){
-	.mision h1{
+	/*.mision h1{
 		padding: 60px;
-	}
+	}*/
 	.mision div{
 		padding: 65px;
 		width: 100%;
@@ -270,17 +437,20 @@ button .fa-search:hover{
 	.personal{
 		padding: 65px 0;
 	}
-	.personal h1{
+	/*.personal h1{
 		margin-bottom: 65px;
-	}
+	}*/
 	.contenedor-personal div{
 		width: 50%;
 	}
-	.contenedor-personal div:nth-child(1), .contenedor-personal div:nth-child(2){
+	.contenedor-personal div:nth-child(1), .contenedor-personal div:nth-child(2), .contenedor-personal div:nth-child(3), .contenedor-personal div:nth-child(4){
 		margin-bottom: 50px;
 	}
-	#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4{
+	#imagen-personal-1, #imagen-personal-2, #imagen-personal-3, #imagen-personal-4, #imagen-personal-5{
 		height: 330px;
+	}
+	.contenedor-personal div:nth-child(5){
+		margin: auto;
 	}
 }
 @media screen and (max-width: 890px){
@@ -302,25 +472,25 @@ button .fa-search:hover{
 	}
 }
 @media screen and (max-width: 570px){
-	.mision h1, .mision div{
+	/*.mision h1, */.mision div{
 		padding: 45px 30px;
 	}
-	.mision h1{
+	/*.mision h1{
 		font-size: 60px;
-	}
+	}*/
 	.contenedor-admision{
 		padding: 45px 30px 60px 30px;
 	}
 	.contenedor-admision div h1{
 		font-size: 30px;
-		margin-bottom: 25px;
+		/*margin-bottom: 25px;*/
 	}
 	.personal{
 		padding: 45px 0;
 	}
 	.personal h1{
 		font-size: 30px;
-		margin-bottom: 45px;
+		/*margin-bottom: 45px;*/
 	}
 	.contenedor-personal div{
 		width: 100%;
@@ -336,12 +506,93 @@ button .fa-search:hover{
 	}
 }
 @media screen and (max-width: 425px){
-	.mision h1{
+	/*.mision h1{
 		font-size: 40px;
-	}
+	}*/
 }
 @media screen and (max-width: 340px){
 	.mision h1{
 		font-size: 30px;
 	}
+}
+
+
+@media screen and (max-width:900px){
+    /* nav */
+    .nav_label{
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        padding-right: 35px;
+    }
+
+    .nav_menu{
+        position: fixed;
+        top: 61px;
+        background: #2C2F48;
+        width: 100%;
+        height: 60vh;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav_item{
+        font-family: 'Times New Roman';
+        font-size: 23px;
+        color: #fff;
+        font-weight: 600;
+        border-bottom: 1px solid #3F425E;
+    }
+
+    .nav_input:checked + .nav_menu{
+        clip-path: circle(100% at center);
+    }
+
+    .search{
+        display: none;
+    }
+
+    .cuenta{
+        display: none;
+    }
+
+    /* Footer */
+    .contenedor-footer{
+        flex-direction: column;
+    }
+
+    .about-us{
+        width: 90%;
+    }
+
+    .social-menu{
+        margin: 40px 0;
+    }
+}
+
+
+@media screen and (max-width:500px){ 
+    /* Footer */
+    .about-us h4{
+        width: auto;
+    }
+
+    .social-menu ul{
+        width: 99%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ul a{
+        margin-bottom: 5px;
+    }
+
+    .titulo-derechos{
+        font-size: 17px;
+    }
 }

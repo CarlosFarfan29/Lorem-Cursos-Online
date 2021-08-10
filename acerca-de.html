@@ -3,21 +3,28 @@
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lorem - About</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
 	<link rel="stylesheet" type="text/css" href="css/styles-about.css">
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 	<script src="https://kit.fontawesome.com/a954c0603f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
-		<nav>
-            <div id="logo">
+	<header class="slider">
+        <nav class="navbar">
+            <div id="logo" class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="logo" width="153px"></a>
             </div>
+
+            <label for="menu" class="nav_label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu" class="nav_input">
             
-            <a href="index.html">Inicio</a>
-            <a href="#cursos">Cursos</a>
-            <a href="acerca-de.html">Acerca de </a>
-            <a href="#contacto">Contacto</a>
+            <div class="nav_menu">
+                <a href="index.html" class="nav_item">Inicio</a>
+                <a href="#cursos" class="nav_item">Cursos</a>
+                <a href="acerca-de.html" class="nav_item">Acerca de </a>
+                <a href="#contacto" class="nav_item">Contacto</a>
+            </div>
 
             <form action="" class="search">
                 <fieldset class="buscar">
@@ -32,11 +39,12 @@
                 <a href="loginvista.html"><button class="btn1">Iniciar Sesión</button></a>
                 <a href="registrarvista.html"><button class="btn2">Crear Cuenta</button></a>
             </div>
-        </nav>	
-	</header>
+        </nav>
+    </header>
 	<main>
 		<section class="mision">
-			<h1>Our Mission</h1>
+			<h1>Nuestra misión</h1>
+			<section class="tittle-style"></section>
 			<div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -61,44 +69,69 @@
 		<section class="admision">
 			<div class="contenedor-admision">
 				<div>
-					<h1>Admission and Fees</h1>
+					<h1>Admisión y tarifas</h1>
+					<section class="tittle-style"></section>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a href="#">Enroll Now</a>
+					<a href="#">Enlístate Ahora</a>
 				</div>
 			</div>
 			<div id="imagen-admision"></div>
 		</section>
 		<section class="personal">
-			<h1>Meet Our Staff</h1>
+			<h1>Conoce nuestro personal</h1>
+			<section class="tittle-style" style="margin-bottom: 70px;"></section>
 			<div class="contenedor-personal">
 				<div>
 					<div id="imagen-personal-1"></div>
-					<h2>Dr. Rachel Myers</h2>
-					<h3>President</h3>
-					<a href="#">info@mysite.com</a>
+					<h2>Dr. Carlos Farfán</h2>
+					<h3>Presidente</h3>
+					<a href="mailto:cjfarfana@unac.edu.pe">cjfarfana@unac.edu.pe</a>
 				</div>
 				<div>
 					<div id="imagen-personal-2"></div>
-					<h2>Frederick Gilbert</h2>
+					<h2>Walter Zerpa</h2>
 					<h3>Instructor</h3>
-					<a href="#">info@mysite.com</a>
+					<a href="mailto:wjzerpas@unac.edu.pe">wjzerpas@unac.edu.pe</a>
 				</div>
 				<div>
 					<div id="imagen-personal-3"></div>
-					<h2>Kate Hogan</h2>
+					<h2>Manuel Castillo</h2>
 					<h3>Instructor</h3>
-					<a href="#">info@mysite.com</a>
+					<a href="mailto:mcastilloj@unac.edu.pe">mcastilloj@unac.edu.pe</a>
 				</div>
 				<div>
 					<div id="imagen-personal-4"></div>
-					<h2>Nathan Castro</h2>
+					<h2>Walter Félix</h2>
 					<h3>Instructor</h3>
-					<a href="#">info@mysite.com</a>
+					<a href="mailto:wlfelixd@unac.edu.pe">wlfelixd@unac.edu.pe</a>
+				</div>
+				<div>
+					<div id="imagen-personal-5"></div>
+					<h2>Sofía Leyva</h2>
+					<h3>Instructora</h3>
+					<a href="mailto:sgleyvah@unac.edu.pe">sgleyvah@unac.edu.pe</a>
 				</div>
 			</div>
 		</section>
 	</main>
-	
+	<footer>
+        <div class="contenedor-footer">
+            <div class="about-us" id="acerca-de">
+                <h4>Acerca de</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quod praesentium, laborum nihil enim cumque consequatur vel doloribus reprehenderit veritatis.</p>
+            </div>
+            <div class="social-menu">
+                <ul>
+                  <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+              </div>
+        </div>
+        <h2 class="titulo-derechos scroll-titulo">Copyright &copy; 2021 Lorem.</h2>
+    </footer>
 </body>
 </html>

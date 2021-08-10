@@ -4,35 +4,44 @@
 	<meta charset="UTF-8">
 	<title>Lorem - Crear Cuenta</title> 
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/styles-login.css">
+    <script src="https://kit.fontawesome.com/a954c0603f.js" crossorigin="anonymous"></script>
 </head>  
 <body>
-    <nav>
-        <div id="logo">
-            <a href="index.html"><img src="img/logo.png" alt="logo" width="153px"></a>
-        </div>
-        
-        <a href="index.html">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="acerca-de.html">Acerca de </a>
-        <a href="#contacto">Contacto</a>
+    <header class="slider">
+        <nav class="navbar">
+            <div id="logo" class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo" width="153px"></a>
+            </div>
 
-        <form action="" class="search">
-            <fieldset class="buscar">
-                <input type="search" name="buscar" id="buscar" placeholder=" ¿Qué deseas aprender?">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </fieldset>
-        </form>
+            <label for="menu" class="nav_label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu" class="nav_input">
+            
+            <div class="nav_menu">
+                <a href="index.html" class="nav_item">Inicio</a>
+                <a href="#cursos" class="nav_item">Cursos</a>
+                <a href="acerca-de.html" class="nav_item">Acerca de </a>
+                <a href="#contacto" class="nav_item">Contacto</a>
+            </div>
 
-        <div class="cuenta">
-            <a href="loginvista.html"><button class="btn1">Iniciar Sesión</button></a>
-            <a href="registrarvista.html"><button class="btn2">Crear Cuenta</button></a>
-        </div>
-    </nav>
+            <form action="" class="search">
+                <fieldset class="buscar">
+                    <input type="search" name="buscar" id="buscar" placeholder=" ¿Qué deseas aprender?">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </fieldset>
+            </form>
+
+            <div class="cuenta">
+                <a href="loginvista.html"><button class="btn1">Iniciar Sesión</button></a>
+                <a href="registrarvista.html"><button class="btn2">Crear Cuenta</button></a>
+            </div>
+        </nav>
+    </header>
 
     <form class="formulario">
         <h1>Crear cuenta</h1>
@@ -68,5 +77,24 @@
             <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html"> Iniciar Sesión </a></p>
         </div>
     </form>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="about-us" id="acerca-de">
+                <h4>Acerca de</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quod praesentium, laborum nihil enim cumque consequatur vel doloribus reprehenderit veritatis.</p>
+            </div>
+            <div class="social-menu">
+                <ul>
+                  <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+              </div>
+        </div>
+        <h2 class="titulo-derechos scroll-titulo">Copyright &copy; 2021 Lorem.</h2>
+    </footer>
 </body>
 </html>
