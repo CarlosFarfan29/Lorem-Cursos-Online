@@ -249,6 +249,19 @@ button .fa-search:hover{
     background-color: #00419E;
 }
 
+.navbar .fa-shopping-cart{
+    font-size: 17px;
+}
+
+.fa-shopping-cart:hover{
+    cursor: pointer;
+    color: #0056D2;
+}
+
+.navbar > a{
+    padding: 0;
+}
+
 .textos-portada{
     display: flex;
     justify-content: center;
@@ -750,6 +763,10 @@ footer{
     }
 
     .search{
+        display: none;
+    }
+
+    .navbar > a{
         display: none;
     }
 

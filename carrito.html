@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Lorem - Crear Cuenta</title> 
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu carrito de compras - Lorem</title>
+    <link rel="stylesheet" href="css/styles-carrito.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/styles-login.css">
     <script src="https://kit.fontawesome.com/a954c0603f.js" crossorigin="anonymous"></script>
-</head>  
+</head>
 <body>
     <header class="slider">
         <nav class="navbar">
@@ -44,41 +45,47 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="carrito-compras">
+            <div class="contenedor-carrito">
+                <div class="descripcion-carrito">
+                    <div class="titulo">
+                        <h2>Tu carrito de compras</h2>
+                        <p>Tienes 1 curso en tu carrito</p>
+                    </div>
+                    <div class="cont-curso">
+                        <img src="img/html5.jpg" alt="">
+                        <div class="texto-curso">
+                            <p class="curso">Curso de HTML: Desde cero</p>
+                            <p class="profe">Por Jordan Rodríguez, Ingeniero en Tecnologías de la Información</p>
+                            <p class="precio">S/ 55.99 <strike>S/ 69</strike></p>
+                        </div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
 
-    <form class="formulario">
-        <h1>Crear cuenta</h1>
-        <div class="contenedor">
-      
-            <div class="input-contenedor">
-            <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Nombres">
+                <div class="descripcion-precio">
+                    <div class="cont-precio">
+                        <h2>Resumen</h2>
+                        <div class="precio subtotal">
+                            <p>Subtotal</p>
+                            <p class="monto">S/ 69</p>
+                        </div>
+                        <div class="precio descuento">
+                            <p>Descuento</p>
+                            <p class="monto">- S/ 13,01</p>
+                        </div>
+                        <div class="precio total">
+                            <p>Total a pagar</p>
+                            <p class="total">S/ 55,99</p>
+                        </div>
+                        <a href="#"><button class="btn-compra">Comprar ahora</button></a>
+                    </div>
+                    <a href="index.html">Continuar comprando <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            
-            <div class="input-contenedor">
-            <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Apellidos">
-            </div>
-    
-            <div class="input-contenedor">
-            <i class="fas fa-mobile icon"></i>
-            <input type="text" placeholder="Numero de Celular">
-            </div>
-    
-            <div class="input-contenedor">
-            <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Correo Electronico">
-            </div>
-            
-            <div class="input-contenedor">
-           <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña">
-            </div>
-    
-            <input type="submit" value="Registrate" class="button">
-            <p>Al registrarte, aceptas nuestras <a class="link-2" href="#">Condiciones de uso</a> y <a class="link-2" href="#">Política de privacidad.</a></p>
-            <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html"> Iniciar Sesión </a></p>
-        </div>
-    </form>
+        </section>
+    </main>
 
     <footer>
         <div class="contenedor-footer">
